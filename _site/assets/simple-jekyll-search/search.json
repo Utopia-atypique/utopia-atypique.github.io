@@ -1,0 +1,85 @@
+
+[
+  
+    {
+      "title"    : "Second article",
+      "category" : "",
+      "tags"     : "Second article",
+      "date"     : "2020-05-05 00:00:00 +0200",
+      
+      "url"      : "http://localhost:4000/_posts/2020-05-05-second-article/"
+    } ,
+  
+    {
+      "title"    : "Premier article",
+      "category" : "",
+      "tags"     : "Premier article",
+      "date"     : "2020-05-05 00:00:00 +0200",
+      
+      "url"      : "http://localhost:4000/_posts/2020-05-05-premier-article/"
+    } 
+  
+  ,
+  
+   {
+     
+        "title"    : "404 Not Found",
+        "category" : "",
+        "tags"     : "",
+        "date"     : "",
+        
+        "url"      : "http://localhost:4000/404"
+     
+   } ,
+  
+   {
+     
+        "title"    : "Archives",
+        "category" : "",
+        "tags"     : "",
+        "date"     : "",
+        
+        "url"      : "http://localhost:4000/archive/"
+     
+   } ,
+  
+   {
+     
+        "title"    : "Tags",
+        "category" : "",
+        "tags"     : "",
+        "date"     : "",
+        
+        "url"      : "http://localhost:4000/tags/"
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+        "title"    : "Utopia",
+        "category" : "",
+        "tags"     : "",
+        "date"     : "",
+        
+        "url"      : "http://localhost:4000/"
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } 
+  
+]
+

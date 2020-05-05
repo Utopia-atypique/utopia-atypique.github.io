@@ -1,0 +1,403 @@
+title: Utopia # site title
+description:
+  Blabla de description
+url: ""
+baseurl: ""
+
+jekyll-theme-WuK: # Theme name
+  default:
+    body:
+      theme-base: theme-base-07 # Base theme of <https://github.com/poole/lanyon>
+      layout-reverse: false
+      sidebar-overlay: false
+    append_to_head: # Introduction et personnalisation des plugins/HTML pour la personnalisation se referer à <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
+      - | # Optimisation de page
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1"
+        />
+        <meta
+          http-equiv="content-type"
+          content="text/html; charset=utf-8"
+        />
+        <link
+          rel="alternate"
+          href="/feed.xml"
+          title="RSS"
+          type="application/rss+xml"
+        />
+      - | # href image top gauche
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+        />
+      - | # favicon  
+        <link
+          rel="shortcut
+          icon"
+          href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+        />
+      - | # lanyon
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
+        />
+      - | # fontawesome
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+        />
+      - | # live2d
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+        />
+        <script
+          async="async"
+          src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+          onload='
+              let pio_container = document.createElement("div");
+              pio_container.classList.add("pio-container");
+              pio_container.classList.add("right");
+              pio_container.style.bottom = "-2rem";
+              pio_container.style.zIndex = "1";
+              document.body.insertAdjacentElement("beforeend", pio_container);
+              let pio_action = document.createElement("div");
+              pio_action.classList.add("pio-action");
+              pio_container.insertAdjacentElement("beforeend", pio_action);
+              let pio_canvas = document.createElement("canvas");
+              pio_canvas.id = "pio";
+              pio_canvas.style.width = "14rem";
+              pio_canvas.width = "600";
+              pio_canvas.height = "800";
+              pio_container.insertAdjacentElement("beforeend", pio_canvas);
+              let pio = new Paul_Pio({
+                "mode": "fixed",
+                "hidden": true,
+                "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
+                "content": {
+                  "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
+                  "skin": ["Changer pour son ami ? ", "Prendre vacance"],
+                  "hidden": true,
+                  "custom": [{
+                    "selector": "a",
+                    "type": "link",
+                  }, {
+                    "selector": ".sidebar-toggle",
+                    "text": "blabla text 1"
+                  }, {
+                    "selector": ".effect-info",
+                    "text": "blabla text 2"
+                  }, {
+                    "selector": "#sidebar-search-input",
+                    "text": "blabla text 3"
+                  }, {
+                    "selector": "#toc",
+                    "text": "blabla text 4"
+                  }, {
+                    "selector": ".page-title",
+                    "text": "blabla text 5"
+                  }, {
+                    "selector": ".v",
+                    "text": "blabla text 6"
+                  }]
+                },
+                "model": [
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+              });'
+        ></script>
+      - | # Image d'arrière-plan du site est divisée en écran vertical et écran large; modifier le lien, ou supprimer cet élément si pas utiliser /assets/image/background.jpg，puis url(/assets/image/background.jpg)
+        <style>
+          .wrap {
+            min-height: 100vh;
+            display: inline-block;
+            background-size: 100vw auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
+          }
+          @media (min-aspect-ratio: 2400/1850) {
+            .wrap {
+              background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+            }
+          }
+        </style>
+      - | # Police du site web
+        <style>
+          html,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          .sidebar {
+            font-family: PingFang SC, Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+          }
+        </style>
+      - | # Correction du style des images en ligne
+        <style>
+          img {
+            display: inline-block;
+            margin: 0;
+          }
+        </style>
+      - | # Uniquement pour Chrome
+        <style>
+          ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
+          }
+        </style>
+      - | # Couleur de police
+        <style>
+          ::selection {
+            color: White;
+            background: Black;
+          }
+        </style>
+    sidebar: # Configuration de la barre latérale
+      disable: false # Affichage ou non de la side bar
+      avatar: # Avatar
+        enable: False
+        img: "" # avatar url
+      nav: # Utilisation de font Awesome
+        - title: '<i class="fas fa-home fa-fw"></i> Home'
+          href: /
+        - title: '<i class="fas fa-tags fa-fw"></i> Tags'
+          href: /tags/
+        - title: '<i class="fas fa-archive fa-fw"></i> Archives'
+          href: /archive/
+      simple_jekyll_search: # Recherche sur tout le site dans la barre latérale
+        enable: true
+        full_text_search: false
+        alert: |
+          <style>
+            #sidebar-search-input {
+              background: none;
+              border: none;
+              color: White;
+              width: 100%;
+            }
+            #sidebar-search-results-container {
+              overflow: auto auto;
+              max-height: 50vh;
+            }
+          </style>
+          <input
+            id="sidebar-search-input"
+            placeholder="Chercher des articles du blog"
+          />
+          <ol
+            id="sidebar-search-results-container"
+          ></ol>
+          <script
+            src='https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
+            async='async'
+            onload='
+              SimpleJekyllSearch({
+                json: "/assets/simple-jekyll-search/search.json",
+                searchInput: document.getElementById("sidebar-search-input"),
+                resultsContainer: document.getElementById("sidebar-search-results-container"),
+                searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
+                limit: 999,
+                fuzzy: true
+              })'
+          ></script>
+      append_to_sidebar:
+
+      wordcount: # nombre total de mots
+        enable: false # Impact la vitesse de génération du site
+        alert: <i class="fas fa-user-edit fa-fw"></i>
+        kilo: Mille
+        unit: Durée
+  page:
+    masthead: # Barre supérieure
+      enable: true
+    append_before:
+      - | # Repliage automatiquement des barres de code
+        <style>
+          pre {
+            max-height: 50vh;
+            overflow: auto;
+          }
+        </style>
+      - | # Pour écran large
+        <style>
+          @media (min-width: 56em) {
+            .container {
+              max-width: 66.6%;
+            }
+          }
+        </style>
+      - | # fond blanc + ecran de chargement
+        <style>
+          .masthead,
+          .container.content {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            animation: animationAppear 2s;
+          }
+          @keyframes animationAppear {
+            0%,
+            33% {
+              opacity: 0;
+            }
+            100% {}
+          }
+        </style>
+      - | # prism
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/combine/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css,gh/PrismJS/prism-themes@1955cfef6953b3a59e66016e8a1e016b45d6cc79/themes/prism-nord.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/combine/npm/prismjs/components/prism-core.min.js,npm/prismjs/plugins/autoloader/prism-autoloader.min.js,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
+          defer="defer"
+          onload='
+            Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
+            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
+            {
+              x[i].classList.add("line-numbers");
+            }
+            Prism.plugins.toolbar.registerButton("select-code", function (env) {
+              let button = document.createElement("button");
+              button.innerHTML = "select this " + env.language;
+              button.addEventListener("click", function () {
+                if (document.body.createTextRange) {
+                  let range = document.body.createTextRange();
+                  range.moveToElementText(env.element);
+                  range.select();
+                } else if (window.getSelection) {
+                  let selection = window.getSelection();
+                  let range = document.createRange();
+                  range.selectNodeContents(env.element);
+                  selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+              });
+              return button;
+            })'
+        ></script>
+      - | # mermaid
+        <style>
+          pre.language-mermaid,
+          code.language-mermaid {
+            display: none;
+          }
+        </style>
+  post:
+    date: # Affichage heure du billet de blog
+      enable: true
+      alert: <i class="fas fa-calendar-day fa-fw"></i>
+    wordcount: # nombre total de caracteres
+      enable: true
+      alert: <i class="fas fa-file-word fa-fw"></i>
+      unit: caracteres
+    readtime: # artile temps de lecture
+      enable: true
+      alert: <i class="fas fa-clock fa-fw"></i>
+      unit: Minutes
+      divided_by: 300
+    visitor: # doit être true pour le timer
+      enable: true
+      alert: <i class="fas fa-book-reader fa-fw"></i>
+      unit: Minutes
+    tags: # affichage tag publication 
+      enable: true
+      alert: <i class="fas fa-tag fa-fw"></i>
+  tags:
+    pie_chart: # Graphique mermaid
+      enable: true
+    alert: <i class="fas fa-tag"></i> # icone devant tag
+    count: true # article par etiquetes
+  archive:
+    posts_count:
+      enable: false # stats sur les articles
+      alert: Articles de blog
+    pie_chart: # afficharge du graphique mermaid
+      enable: true
+    year_count: true
+    alert: <i class="fas fa-folder-open"></i>
+  home: # Modele de generation
+    append_to_section_tag:
+      - key: data-markdown
+      - key: data-separator # Separateur de page horizontal
+        value: <!-- slide -->
+      - key: data-separator-vertical # Separateur de page vertical
+        value: <!-- slide vertical=true -->
+    append_before: |
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/combine/npm/reveal.js/css/reveal.min.css,npm/reveal.js/css/theme/serif.min.css"
+      />
+      <style>
+        .sidebar {
+          line-height: 1.5;
+        }
+        .reveal .slides {
+          text-align: left;
+        }
+      </style>
+      <script
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.min.js"
+        onload="
+        document.getElementsByClassName('wrap')[0].classList.add('reveal');
+        let path = 'https:\/\/cdn.jsdelivr.net/npm/reveal.js/';
+        Reveal.initialize({
+          height: '100%',
+          hash: true,
+          mouseWheel: true,
+          navigationMode: 'linear',
+          parallaxBackgroundImage: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA=',//Image blanche
+          dependencies: [
+              { src: path+'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: path+'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: path+'plugin/highlight/highlight.js', async: true },
+              { src: path+'plugin/zoom-js/zoom.js', async: true },
+              { src: path+'plugin/notes/notes.js', async: true },
+              { src: path+'plugin/math/math.js', async: true }
+          ]
+          });
+        "></script>
+
+# Pluggins pris en charge : <https://pages.github.com/versions/>
+plugins: # <https://jekyllrb.com/docs/plugins/>
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed 
+  - jekyll-remote-theme
+
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.5 # utiliser verson fixe pour eviter bug
+
+readme_index: # Lorsque index.md et index.html sont manquant utiliser readme.md
+  with_frontmatter: true # Readme avec header yaml
+
+permalink: /_posts/:year-:month-:day-:title/ #format du message généré
+# timezone: Europe/Paris # timezone
+# future: false # Pas d'article dans le futur
+
+# limit_posts: 999 # nombre de post maximal
+# encoding: utf-8
+
+markdown: kramdown
+kramdown: # voir <https://kramdown.gettalong.org/options.html>
+  input: GFM # voir <http://jekyllcn.com/docs/configuration/#kramdown>
+  syntax_highlighter_opts: # Visible <https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
+    disable: true # desactivation surbrillance par defaut puis prism
